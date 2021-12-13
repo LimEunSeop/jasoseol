@@ -1,0 +1,20 @@
+.dates {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.days {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.day {
+  float: left;
+  width: 14.285714%; // 7등분
+}
