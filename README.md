@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# 자소설닷컴 웹 프론트엔드 분야 과제 (채용달력)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 개요
 
-## Available Scripts
+### 소요시간
 
-In the project directory, you can run:
+3일
 
-### `npm start`
+- 1일차: 컨셉구상
+- 2일차: 마크업 & 기능구현
+- 3일차: 마크업 보완, 스타일링 작업. 문서 작성
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 사용 기술
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React (Create React App 사용)
+- 자바스크립트 기본 Date API
+- SCSS Module, classnames, react-modal
 
-### `npm test`
+### 실행방법
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm start`
 
-### `npm run build`
+## 프로젝트 설명
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 폴더 트리
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+src
+ ├── assets : 폰트, 이미지, 비디오 등이 들어갈 곳
+ │   └── fonts
+ ├── components : 리액트 컴포넌트
+ │   └── Calendar : 아래와 같이 클래스충돌없이 스타일을 독립적으로 관리할 수 있습니다.
+ │       ├── Calendar.module.scss
+ │       └── Calendar.tsx
+ ├── styles : 공통으로 사용되는 스타일 관리
+ ├── utils : 유틸리티 함수
+ └── index.tsx : 엔트리파일
+```
