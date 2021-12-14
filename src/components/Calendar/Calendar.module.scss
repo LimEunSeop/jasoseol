@@ -1,13 +1,31 @@
+@import '../../styles/colors.scss';
+
+.days {
+  display: table-row;
+}
+
 .day {
-  display: inline-block;
-  width: 14.285714%; // 7등분
+  display: table-cell;
+  width: calc(14.285714%); // 7등분
+  background-color: $lightgray;
+  margin-left: -1px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  border-right: 1px solid $border;
+  border-bottom: 1px solid $border;
 }
 
 .week {
+  display: table-row;
+  height: 160px;
 }
 
 .dates {
-}
-
-.days {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-left: 1px solid $border;
+  border-top: 1px solid $border;
 }

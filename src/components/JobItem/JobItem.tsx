@@ -3,6 +3,7 @@ import Modal from 'react-modal'
 import styles from './JobItem.module.scss'
 import formatDateTime from '../../utils/formatDateTime'
 import normalizeDate from '../../utils/normalizeDate'
+import classnames from 'classnames/bind'
 
 export interface Job {
   id: number
@@ -25,6 +26,8 @@ interface Props {
 
 Modal.setAppElement('#root')
 
+const cx = classnames.bind(styles)
+
 const JobItem = ({ data, type }: Props) => {
   const [modalOpened, setModalOpened] = useState(false)
 
@@ -37,15 +40,16 @@ const JobItem = ({ data, type }: Props) => {
       normalizeDate(new Date(endDate)).getTime()) /
     86400000
 
-  const typeInfo: { label?: string; display?: string } = {}
-
+  const typeInfo: { label?: string; display?: string; class?: string } = {}
   switch (type) {
     case JobType.Start:
       typeInfo.label = '시작'
       typeInfo.display = '시'
+      typeInfo.class = 'start'
       break
     case JobType.End:
       typeInfo.label = typeInfo.display = '끝'
+      typeInfo.class = 'end'
       break
     default:
       console.error('정의되지 않은 JobType')
@@ -61,9 +65,14 @@ const JobItem = ({ data, type }: Props) => {
 
   return (
     <>
-      <button type="button" onClick={openModal}>
-        <span aria-label={typeInfo.label}>{typeInfo.display}</span>
-        <span>{data.name}</span>
+      <button type="button" onClick={openModal} className={styles.item}>
+        <span
+          aria-label={typeInfo.label}
+          className={cx('label', typeInfo.class)}
+        >
+          {typeInfo.display}
+        </span>
+        <span className={styles.name}>{data.name}</span>
       </button>
       {modalOpened && (
         <Modal
@@ -82,7 +91,11 @@ const JobItem = ({ data, type }: Props) => {
           }}
         >
           <div className={styles.modalHeader}>
-            <img src={data.image} alt={`${data.name} 기업 이미지`} />
+            <img
+              src={data.image}
+              alt={`${data.name} 기업 이미지`}
+              width="100"
+            />
             <div className={styles.info}>
               <b>{data.name}</b>
               <div className={styles.period}>
@@ -115,7 +128,10 @@ const JobItem = ({ data, type }: Props) => {
             </button>
           </div>
 
-          <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
+          <div
+            dangerouslySetInnerHTML={{ __html: data.content }}
+            style={{ overflow: 'scroll' }}
+          ></div>
         </Modal>
       )}
     </>

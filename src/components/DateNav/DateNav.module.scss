@@ -1,0 +1,30 @@
+@import '../../styles/colors.scss';
+
+.container {
+  position: relative;
+  width: 130px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 21px;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $gray;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.currentMonth {
+  font-weight: 800;
+  color: $orange;
+}

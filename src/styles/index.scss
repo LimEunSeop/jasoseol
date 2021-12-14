@@ -1,0 +1,14 @@
+@import './common.scss';
+@import './custom-reset.scss';
+@import './fonts.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

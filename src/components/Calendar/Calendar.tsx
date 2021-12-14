@@ -100,10 +100,6 @@ const Calendar = () => {
   if (loading) {
     return <div>로딩중...</div>
   }
-  console.log(
-    data.current,
-    dateList.map((item) => item.getTime())
-  )
 
   return (
     <section>
@@ -123,7 +119,7 @@ const Calendar = () => {
         </div>
         {Array.from(new Array(dateList.length / 7), (_, i) => i).map(
           (weekIdx) => (
-            <div className={styles.week}>
+            <div key={weekIdx} className={styles.week}>
               {[
                 weekIdx * 7,
                 weekIdx * 7 + 1,

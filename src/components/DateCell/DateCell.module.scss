@@ -1,4 +1,25 @@
+@import '../../styles/colors.scss';
+
 .container {
-  display: inline-block;
-  width: 14.285714%; // 7등분
+  display: table-cell;
+  width: calc(14.285714%); // 7등분
+  height: 100%;
+  border-right: 1px solid $border;
+  border-bottom: 1px solid $border;
+}
+
+.date {
+  text-align: center;
+  background-color: $darkwhite;
+  border-bottom: 1px solid $border;
+}
+
+.items {
+  padding: 5px 5px 0 5px;
+}
+
+.item {
+  height: 14px;
+  line-height: 14px;
+  margin-bottom: 5px;
 }
