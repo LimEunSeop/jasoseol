@@ -121,14 +121,32 @@ const Calendar = () => {
           <div className={styles.day}>금</div>
           <div className={styles.day}>토</div>
         </div>
-        {dateList.map((dateItem) => (
-          <DateCell
-            key={dateItem.getTime()}
-            date={dateItem}
-            startItems={data.current.get(dateItem.getTime())?.start_items}
-            endItems={data.current.get(dateItem.getTime())?.end_items}
-          />
-        ))}
+        {Array.from(new Array(dateList.length / 7), (_, i) => i).map(
+          (weekIdx) => (
+            <div className={styles.week}>
+              {[
+                weekIdx * 7,
+                weekIdx * 7 + 1,
+                weekIdx * 7 + 2,
+                weekIdx * 7 + 3,
+                weekIdx * 7 + 4,
+                weekIdx * 7 + 5,
+                weekIdx * 7 + 6,
+              ].map((dateIdx) => (
+                <DateCell
+                  key={dateList[dateIdx].getTime()}
+                  date={dateList[dateIdx]}
+                  startItems={
+                    data.current.get(dateList[dateIdx].getTime())?.start_items
+                  }
+                  endItems={
+                    data.current.get(dateList[dateIdx].getTime())?.end_items
+                  }
+                />
+              ))}
+            </div>
+          )
+        )}
       </div>
     </section>
   )

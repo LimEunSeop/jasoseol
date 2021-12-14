@@ -13,24 +13,20 @@ const DateCell = ({ date, startItems, endItems }: Props) => {
     <>
       <div className={styles.container}>
         <div className={styles.date}>{date.getDate()}</div>
-        {startItems && (
-          <ul className={styles.startList}>
-            {startItems.map((item) => (
-              <li>
-                <JobItem data={item} type={JobType.Start} />
-              </li>
-            ))}
-          </ul>
-        )}
-        {endItems && (
-          <ul className={styles.endList}>
-            {endItems.map((item) => (
-              <li>
-                <JobItem data={item} type={JobType.End} />
-              </li>
-            ))}
-          </ul>
-        )}
+        <ul className={styles.startList}>
+          {startItems?.map((item) => (
+            <li>
+              <JobItem data={item} type={JobType.Start} />
+            </li>
+          ))}
+        </ul>
+        <ul className={styles.endList}>
+          {endItems?.map((item) => (
+            <li>
+              <JobItem data={item} type={JobType.End} />
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   )
