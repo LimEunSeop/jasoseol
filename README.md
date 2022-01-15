@@ -2,6 +2,8 @@
 
 <a href="https://limeunseop.github.io/jasoseol">![link](https://img.shields.io/badge/link-https%3A%2F%2Flimeunseop.github.io%2Fjasoseol-brightgreen)</a>
 
+## 2021년도 데이터밖에 없으므로, 달력을 2021년도로 바꿔주시기 바랍니다.
+
 ## 개요
 
 ### 소요시간
