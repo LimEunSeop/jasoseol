@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/jasoseol/static/css/main.a89d8ee1.chunk.css",
+    "main.js": "/jasoseol/static/js/main.65699209.chunk.js",
+    "main.js.map": "/jasoseol/static/js/main.65699209.chunk.js.map",
+    "runtime-main.js": "/jasoseol/static/js/runtime-main.da8eb782.js",
+    "runtime-main.js.map": "/jasoseol/static/js/runtime-main.da8eb782.js.map",
+    "static/js/2.8e689c92.chunk.js": "/jasoseol/static/js/2.8e689c92.chunk.js",
+    "static/js/2.8e689c92.chunk.js.map": "/jasoseol/static/js/2.8e689c92.chunk.js.map",
+    "static/js/3.c2a912fc.chunk.js": "/jasoseol/static/js/3.c2a912fc.chunk.js",
+    "static/js/3.c2a912fc.chunk.js.map": "/jasoseol/static/js/3.c2a912fc.chunk.js.map",
+    "index.html": "/jasoseol/index.html",
+    "static/css/main.a89d8ee1.chunk.css.map": "/jasoseol/static/css/main.a89d8ee1.chunk.css.map",
+    "static/js/2.8e689c92.chunk.js.LICENSE.txt": "/jasoseol/static/js/2.8e689c92.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/jasoseol/static/media/NotoSansKR-Thin.e4804399.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da8eb782.js",
+    "static/js/2.8e689c92.chunk.js",
+    "static/css/main.a89d8ee1.chunk.css",
+    "static/js/main.65699209.chunk.js"
+  ]
+}
